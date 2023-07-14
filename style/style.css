@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("https://image.tmdb.org/t/p/original//bPnPsyo09tLRnTOb7AlsBsgnbhP.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: "Oswald", sans-serif;
+  /* main color of the page */
+  /* media queries */
+}
+body .gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+body .container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 65%;
+}
+body .container header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+body .container header h1 {
+  flex: 40%;
+}
+body .container header form {
+  flex: 60%;
+  position: relative;
+}
+body .container header form input {
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  color: white;
+  padding: 15px;
+  font-size: 1.2rem;
+  background: none;
+  width: 100%;
+}
+body .container header form .match-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  width: 100%;
+  background-color: #1d1d1d;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 0 10px 5px rgba(139, 139, 139, 0.67);
+}
+body .container header form .match-box ul li {
+  list-style: none;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+  padding: 10px;
+  transition: all 0.3s ease-in;
+}
+body .container header form .match-box ul li:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+body .container section {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+}
+body .container section .poster {
+  flex: 40%;
+}
+body .container section .poster img {
+  width: 100%;
+  vertical-align: middle;
+  border-radius: 5px 0 0 5px;
+}
+body .container section .info {
+  flex: 60%;
+  padding: 30px;
+  font-size: 1.1rem;
+}
+body .container section .info .sub-info {
+  margin-top: 30px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+body .container section .info .sub-info div:first-of-type {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+body .container section .info .sub-info div:nth-of-type(2) {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+body .container section .info .sub-info div:nth-of-type(3) {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+body .container section .info .sub-info div:last-of-type {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+body .main-color {
+  color: #c23616;
+}
+@media (max-width: 1200px) and (min-width: 992px) {
+  body .container {
+    width: 80%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  body .container {
+    width: 90%;
+  }
+  body .hidden {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  body body {
+    display: initial;
+  }
+  body .container {
+    width: 90%;
+    margin: 15px auto;
+  }
+  body .container header {
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-bottom: 25px;
+    border-radius: 5px;
+  }
+  body .container section {
+    flex-direction: column;
+  }
+  body .container section .poster {
+    order: 2;
+  }
+  body .container section .info {
+    order: 1;
+  }
+  body .gradient {
+    position: fixed;
+  }
+  body .container section .poster img {
+    border-radius: 0 0 5px 5px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
